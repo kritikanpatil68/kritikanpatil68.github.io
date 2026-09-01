@@ -70,7 +70,7 @@
 
 
         /* ========================================= */
-        /* HOME / HERO */
+        /* HOME */
         /* ========================================= */
 
         .hero {
@@ -193,7 +193,7 @@
 
 
         /* ========================================= */
-        /* GENERAL SECTION SETTINGS */
+        /* GENERAL SECTIONS */
         /* ========================================= */
 
         section {
@@ -208,7 +208,7 @@
         .section-subtitle {
             color: #9ba5bd;
             margin-bottom: 45px;
-            max-width: 750px;
+            max-width: 800px;
             font-size: 17px;
         }
 
@@ -241,32 +241,118 @@
         /* EXPERIENCE */
         /* ========================================= */
 
+        .experience-section {
+            background: #0b1020;
+        }
+
         .experience-card {
             background: #121a2d;
-            padding: 28px;
-            border-radius: 12px;
-            margin-bottom: 20px;
-            border: 1px solid #202b46;
+            padding: 36px;
+            border-radius: 16px;
+            margin-bottom: 28px;
+            border: 1px solid #26314d;
             transition: 0.3s;
         }
 
         .experience-card:hover {
-            transform: translateY(-3px);
+            transform: translateY(-4px);
             border-color: #6676ff;
         }
 
-        .experience-card h3 {
-            font-size: 23px;
-            margin-bottom: 5px;
+        .experience-header {
+            margin-bottom: 22px;
         }
 
-        .experience-card h4 {
+        .experience-header h3 {
+            font-size: 27px;
+            margin-bottom: 4px;
+        }
+
+        .experience-role {
             color: #95a5ff;
-            margin-bottom: 10px;
+            font-size: 17px;
+            font-weight: bold;
+            margin-bottom: 14px;
         }
 
-        .experience-card p {
-            color: #aeb7cb;
+        .experience-summary {
+            color: #c1c9da;
+            font-size: 16px;
+            line-height: 1.75;
+            max-width: 1050px;
+        }
+
+        .experience-block {
+            margin-top: 26px;
+        }
+
+        .experience-block h4 {
+            color: #ffffff;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .experience-block ul {
+            padding-left: 22px;
+            color: #b6bfd2;
+        }
+
+        .experience-block li {
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+
+        .result-box {
+            background: #0e1629;
+            border-left: 3px solid #6676ff;
+            padding: 18px 20px;
+            border-radius: 8px;
+            color: #c4ccdb;
+            line-height: 1.7;
+        }
+
+        .learning-box {
+            color: #b6bfd2;
+            line-height: 1.75;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 18px;
+        }
+
+        .skill-tag {
+            background: rgba(102, 118, 255, 0.12);
+            border: 1px solid rgba(102, 118, 255, 0.35);
+            color: #aab4ff;
+            padding: 7px 13px;
+            border-radius: 20px;
+            font-size: 13px;
+        }
+
+        .experience-actions {
+            margin-top: 25px;
+        }
+
+        .experience-link {
+            display: inline-block;
+            background: #6676ff;
+            color: white;
+            padding: 11px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .experience-link:hover {
+            background: #7886ff;
+            transform: translateY(-2px);
         }
 
 
@@ -375,7 +461,7 @@
 
 
         /* ========================================= */
-        /* TABLET / SMALL LAPTOP */
+        /* TABLET */
         /* ========================================= */
 
         @media (max-width: 1100px) {
@@ -506,6 +592,10 @@
                 font-size: 32px;
             }
 
+            .experience-card {
+                padding: 25px;
+            }
+
         }
 
     </style>
@@ -524,29 +614,17 @@
 
     <ul>
 
-        <li>
-            <a href="#home">Home</a>
-        </li>
+        <li><a href="#home">Home</a></li>
 
-        <li>
-            <a href="#about">About</a>
-        </li>
+        <li><a href="#about">About</a></li>
 
-        <li>
-            <a href="#experience">Experience</a>
-        </li>
+        <li><a href="#experience">Experience</a></li>
 
-        <li>
-            <a href="#projects">Projects</a>
-        </li>
+        <li><a href="#projects">Projects</a></li>
 
-        <li>
-            <a href="#skills">Skills</a>
-        </li>
+        <li><a href="#skills">Skills</a></li>
 
-        <li>
-            <a href="#contact">Contact</a>
-        </li>
+        <li><a href="#contact">Contact</a></li>
 
     </ul>
 
@@ -574,13 +652,11 @@
         </h2>
 
         <p>
-
             I combine marketing strategy, business understanding, and analytics
             to uncover what drives performance. With experience across marketing
             measurement, MMM, ROI, customer insights, and forecasting, I turn
             complex data into clear recommendations that support smarter business
             decisions.
-
         </p>
 
 
@@ -618,8 +694,6 @@
     </div>
 
 
-    <!-- PROFILE PHOTO -->
-
     <div class="hero-photo">
 
         <img
@@ -635,25 +709,16 @@
 <!-- ABOUT -->
 <!-- ========================================= -->
 
-<section
-    class="about"
-    id="about">
-
+<section class="about" id="about">
 
     <div class="about-content">
 
-
         <h2 class="section-title">
-
             About Me
-
         </h2>
 
-
         <p class="section-subtitle">
-
             Where marketing strategy, analytics, and AI come together.
-
         </p>
 
 
@@ -701,7 +766,6 @@
 
         </p>
 
-
     </div>
 
 </section>
@@ -711,89 +775,414 @@
 <!-- EXPERIENCE -->
 <!-- ========================================= -->
 
-<section id="experience">
+<section
+    class="experience-section"
+    id="experience">
 
 
     <h2 class="section-title">
-
         Experience
-
     </h2>
 
 
     <p class="section-subtitle">
 
-        Experience across marketing analytics, consulting and business analytics.
+        Selected experience across business analytics, marketing effectiveness,
+        customer insights, and real-world marketing execution.
 
     </p>
 
 
-    <!-- KANTAR -->
 
-    <div class="experience-card">
-
-        <h3>
-            Kantar
-        </h3>
-
-        <h4>
-            Consultant – Data Strategy & Engineering
-        </h4>
-
-        <p>
-
-            Worked on marketing measurement, Marketing Mix Modeling,
-            brand analytics, ROI analysis and customer insights to support
-            business and marketing investment decisions.
-
-        </p>
-
-    </div>
-
-
+    <!-- ========================================= -->
     <!-- HSD METRICS -->
+    <!-- ========================================= -->
 
     <div class="experience-card">
 
-        <h3>
-            HSD Metrics
-        </h3>
 
-        <h4>
-            Business Analytics
-        </h4>
+        <div class="experience-header">
 
-        <p>
+            <h3>
+                HSD Metrics
+            </h3>
 
-            Translated business requirements into an analytics solution
-            and developed an interactive business-case and ROI dashboard
-            using Python and Streamlit.
+            <div class="experience-role">
+                Business Analytics Intern
+            </div>
 
-        </p>
+            <p class="experience-summary">
+
+                Turned a real business requirement into an interactive analytics
+                product designed to communicate the financial impact of employee
+                turnover and support the business case for employee-listening
+                solutions.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="experience-block">
+
+            <h4>
+                What I Worked On
+            </h4>
+
+            <ul>
+
+                <li>
+                    Translated stakeholder requirements and business rules into
+                    analytical calculations and an easy-to-use workflow.
+                </li>
+
+                <li>
+                    Built the HSD HQ Brief using Python and Streamlit, combining
+                    turnover-cost estimates, ROI scenarios, interactive visualizations,
+                    and executive-ready reporting.
+                </li>
+
+                <li>
+                    Designed the tool for non-technical users so they could enter
+                    organizational assumptions, compare scenarios, and understand
+                    the financial story behind the results.
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <div class="experience-block">
+
+            <h4>
+                Result
+            </h4>
+
+            <div class="result-box">
+
+                Developed an end-to-end decision-support application that transformed
+                multiple business inputs into clear financial insights and generated
+                executive-ready outputs for business conversations.
+
+            </div>
+
+        </div>
+
+
+
+        <div class="experience-block">
+
+            <h4>
+                What I Learned
+            </h4>
+
+            <p class="learning-box">
+
+                This experience strengthened my ability to move from an open-ended
+                business requirement to a working analytics product. I learned how
+                to balance analytical logic with usability, stakeholder communication,
+                and clear business storytelling.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="skill-tags">
+
+            <span class="skill-tag">Python</span>
+
+            <span class="skill-tag">Streamlit</span>
+
+            <span class="skill-tag">Pandas</span>
+
+            <span class="skill-tag">ROI Modeling</span>
+
+            <span class="skill-tag">Scenario Analysis</span>
+
+            <span class="skill-tag">Business Analysis</span>
+
+            <span class="skill-tag">Data Visualization</span>
+
+        </div>
+
+
+
+        <div class="experience-actions">
+
+            <a
+                href="https://hsd-hq-brief-zwapplycc8pzctbw8efkej5.streamlit.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="experience-link">
+
+                View Live Dashboard
+
+            </a>
+
+        </div>
+
 
     </div>
 
 
+
+    <!-- ========================================= -->
+    <!-- KANTAR -->
+    <!-- ========================================= -->
+
+    <div class="experience-card">
+
+
+        <div class="experience-header">
+
+            <h3>
+                Kantar
+            </h3>
+
+            <div class="experience-role">
+                Consultant – Data Strategy & Engineering
+            </div>
+
+            <p class="experience-summary">
+
+                Worked on marketing effectiveness and brand analytics engagements,
+                helping businesses understand what was driving performance, how
+                marketing investments were contributing to results, and where
+                future investment could be more effective.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="experience-block">
+
+            <h4>
+                What I Worked On
+            </h4>
+
+            <ul>
+
+                <li>
+                    Supported end-to-end Marketing Mix Modeling across multiple
+                    markets and categories using sales, media, pricing, promotions,
+                    distribution, seasonality, and external business drivers.
+                </li>
+
+                <li>
+                    Built marketing KPIs, harmonized data, applied adstock and
+                    carryover concepts, and supported regression modeling and
+                    model diagnostics.
+                </li>
+
+                <li>
+                    Converted model outputs into channel contribution, ROI,
+                    response curves, and recommendations that supported marketing
+                    investment decisions.
+                </li>
+
+                <li>
+                    Supported brand equity and ROE modeling to understand the
+                    drivers of brand favorability and consideration and translate
+                    statistical results into stakeholder-ready narratives.
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <div class="experience-block">
+
+            <h4>
+                Result
+            </h4>
+
+            <div class="result-box">
+
+                Helped translate complex marketing and brand data into actionable
+                recommendations while maintaining project CSAT above 90% and
+                rework below 5%. On a financial-services engagement, modeling
+                recommendations contributed to approximately 10–12% improvement
+                in business performance.
+
+            </div>
+
+        </div>
+
+
+
+        <div class="experience-block">
+
+            <h4>
+                What I Learned
+            </h4>
+
+            <p class="learning-box">
+
+                Kantar taught me that a strong model is only valuable when it
+                answers the business question behind the analysis. I developed
+                a stronger understanding of how to connect statistical modeling
+                with marketing strategy, customer behavior, ROI, and stakeholder
+                communication.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="skill-tags">
+
+            <span class="skill-tag">Marketing Mix Modeling</span>
+
+            <span class="skill-tag">Regression</span>
+
+            <span class="skill-tag">Adstock</span>
+
+            <span class="skill-tag">Carryover</span>
+
+            <span class="skill-tag">ROI Analysis</span>
+
+            <span class="skill-tag">Response Curves</span>
+
+            <span class="skill-tag">Brand Analytics</span>
+
+            <span class="skill-tag">Customer Insights</span>
+
+            <span class="skill-tag">Data Storytelling</span>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ========================================= -->
     <!-- MARS WRIGLEY -->
+    <!-- ========================================= -->
 
     <div class="experience-card">
 
-        <h3>
-            Mars Wrigley
-        </h3>
 
-        <h4>
-            Marketing
-        </h4>
+        <div class="experience-header">
 
-        <p>
+            <h3>
+                Mars Wrigley
+            </h3>
 
-            Supported retail promotions, merchandising and sales initiatives
-            while analyzing opportunities to improve in-store performance.
+            <div class="experience-role">
+                Marketing Intern – Retail Promotions & Merchandising
+            </div>
 
-        </p>
+            <p class="experience-summary">
+
+                Gained direct exposure to how marketing strategy comes to life
+                at the point of purchase and how promotions, merchandising,
+                product visibility, and shopper behavior influence commercial
+                performance.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="experience-block">
+
+            <h4>
+                What I Worked On
+            </h4>
+
+            <ul>
+
+                <li>
+                    Supported in-store promotional and merchandising activities
+                    across retail environments.
+                </li>
+
+                <li>
+                    Observed product placement, visibility, promotional execution,
+                    and shopper response to identify opportunities for stronger
+                    retail execution.
+                </li>
+
+                <li>
+                    Developed practical understanding of how marketing decisions
+                    influence consumer behavior and sales at the store level.
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <div class="experience-block">
+
+            <h4>
+                Result
+            </h4>
+
+            <div class="result-box">
+
+                Built a strong foundation in real-world marketing execution and
+                developed an understanding of how promotional strategy and
+                merchandising translate into shopper behavior and commercial
+                performance.
+
+            </div>
+
+        </div>
+
+
+
+        <div class="experience-block">
+
+            <h4>
+                What I Learned
+            </h4>
+
+            <p class="learning-box">
+
+                Mars helped me understand marketing from the customer's point of
+                view — not only through numbers, but through how people experience
+                products, promotions, visibility, and merchandising at the point
+                of purchase.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="skill-tags">
+
+            <span class="skill-tag">Retail Marketing</span>
+
+            <span class="skill-tag">Promotions</span>
+
+            <span class="skill-tag">Merchandising</span>
+
+            <span class="skill-tag">Consumer Behavior</span>
+
+            <span class="skill-tag">Retail Execution</span>
+
+            <span class="skill-tag">Commercial Thinking</span>
+
+        </div>
+
 
     </div>
+
 
 </section>
 
@@ -808,9 +1197,7 @@
 
 
     <h2 class="section-title">
-
         Featured Projects
-
     </h2>
 
 
@@ -825,8 +1212,6 @@
     <div class="project-grid">
 
 
-        <!-- PROJECT 1 -->
-
         <div class="project-card">
 
             <h3>
@@ -834,23 +1219,17 @@
             </h3>
 
             <p>
-
                 Evaluated marketing channel contribution, ROI,
                 response curves and optimization opportunities
                 to support marketing investment decisions.
-
             </p>
 
             <div class="tools">
-
                 MMM • Regression • ROI Analysis • Marketing Analytics
-
             </div>
 
         </div>
 
-
-        <!-- PROJECT 2 -->
 
         <div class="project-card">
 
@@ -859,23 +1238,17 @@
             </h3>
 
             <p>
-
                 Analyzed the impact of media, customer experience,
                 reputation and other business drivers on brand
                 favorability and consideration.
-
             </p>
 
             <div class="tools">
-
                 Regression • Customer Insights • Brand Analytics
-
             </div>
 
         </div>
 
-
-        <!-- PROJECT 3 -->
 
         <div class="project-card">
 
@@ -884,23 +1257,17 @@
             </h3>
 
             <p>
-
                 Built an interactive analytics tool that converts
                 business inputs into turnover-cost estimates,
                 ROI scenarios and executive-ready reporting.
-
             </p>
 
             <div class="tools">
-
                 Python • Streamlit • Pandas • Business Analytics
-
             </div>
 
         </div>
 
-
-        <!-- PROJECT 4 -->
 
         <div class="project-card">
 
@@ -909,23 +1276,17 @@
             </h3>
 
             <p>
-
                 Developed an intelligent grocery-management application
                 that prioritizes expiring items and provides actionable
                 recommendations to reduce food waste.
-
             </p>
 
             <div class="tools">
-
                 Python • Streamlit • AI • Data Analytics
-
             </div>
 
         </div>
 
-
-        <!-- PROJECT 5 -->
 
         <div class="project-card">
 
@@ -934,23 +1295,17 @@
             </h3>
 
             <p>
-
                 Analyzed customer purchase behavior to evaluate the
                 relationship between promotions, retention and
                 basket size.
-
             </p>
 
             <div class="tools">
-
                 Customer Analytics • Statistics • Data Storytelling
-
             </div>
 
         </div>
 
-
-        <!-- PROJECT 6 -->
 
         <div class="project-card">
 
@@ -959,17 +1314,13 @@
             </h3>
 
             <p>
-
                 Compared forecasting approaches and evaluated model
                 performance to identify reliable methods for
                 predicting future business trends.
-
             </p>
 
             <div class="tools">
-
                 R • Time Series • Forecasting • Model Evaluation
-
             </div>
 
         </div>
@@ -988,121 +1339,81 @@
 
 
     <h2 class="section-title">
-
         Skills
-
     </h2>
 
 
     <p class="section-subtitle">
-
         Tools and capabilities I use to solve business problems.
-
     </p>
 
 
     <div class="skills-grid">
 
 
-        <!-- ANALYTICS -->
-
         <div class="skill-box">
 
-            <h3>
-                Analytics
-            </h3>
+            <h3>Analytics</h3>
 
             <p>
-
                 Marketing Mix Modeling
                 <br>
-
                 Customer Analytics
                 <br>
-
                 ROI Analysis
                 <br>
-
                 Forecasting
                 <br>
-
                 Regression
-
             </p>
 
         </div>
 
 
-        <!-- PROGRAMMING -->
-
         <div class="skill-box">
 
-            <h3>
-                Programming
-            </h3>
+            <h3>Programming</h3>
 
             <p>
-
                 Python
                 <br>
-
                 SQL
                 <br>
-
                 R
-
             </p>
 
         </div>
 
 
-        <!-- VISUALIZATION -->
-
         <div class="skill-box">
 
-            <h3>
-                Visualization
-            </h3>
+            <h3>Visualization</h3>
 
             <p>
-
                 Tableau
                 <br>
-
                 Power BI
                 <br>
-
                 Streamlit
                 <br>
-
                 Advanced Excel
-
             </p>
 
         </div>
 
 
-        <!-- BUSINESS -->
-
         <div class="skill-box">
 
-            <h3>
-                Business
-            </h3>
+            <h3>Business</h3>
 
             <p>
-
                 Customer Insights
                 <br>
-
                 Requirements Analysis
                 <br>
-
                 Data Storytelling
                 <br>
-
                 Business Case Development
-
             </p>
 
         </div>
@@ -1123,9 +1434,7 @@
 
 
     <h2 class="section-title">
-
         Let's Connect
-
     </h2>
 
 
@@ -1142,8 +1451,6 @@
         style="justify-content:center;">
 
 
-        <!-- LINKEDIN -->
-
         <a
             href="https://www.linkedin.com/in/kritika-patil-a21aa3185/"
             target="_blank"
@@ -1153,8 +1460,6 @@
 
         </a>
 
-
-        <!-- GITHUB -->
 
         <a
             href="https://github.com/kritikanpatil68"
