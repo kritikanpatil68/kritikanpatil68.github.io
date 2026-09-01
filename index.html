@@ -208,7 +208,7 @@
         .section-subtitle {
             color: #9ba5bd;
             margin-bottom: 45px;
-            max-width: 800px;
+            max-width: 850px;
             font-size: 17px;
         }
 
@@ -259,14 +259,32 @@
             border-color: #6676ff;
         }
 
-        .experience-header {
-            margin-bottom: 22px;
-        }
 
-        .experience-header h3 {
-            font-size: 27px;
+        /* Company + date row */
+
+        .experience-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 25px;
             margin-bottom: 4px;
         }
+
+        .experience-top h3 {
+            font-size: 27px;
+            margin: 0;
+        }
+
+        .experience-date {
+            color: #aeb6cc;
+            font-size: 15px;
+            font-weight: bold;
+            white-space: nowrap;
+            padding-top: 6px;
+        }
+
+
+        /* Role */
 
         .experience-role {
             color: #95a5ff;
@@ -275,12 +293,18 @@
             margin-bottom: 14px;
         }
 
+
+        /* Intro summary */
+
         .experience-summary {
             color: #c1c9da;
             font-size: 16px;
             line-height: 1.75;
             max-width: 1050px;
         }
+
+
+        /* Internal experience sections */
 
         .experience-block {
             margin-top: 26px;
@@ -304,6 +328,9 @@
             line-height: 1.7;
         }
 
+
+        /* Result */
+
         .result-box {
             background: #0e1629;
             border-left: 3px solid #6676ff;
@@ -313,16 +340,22 @@
             line-height: 1.7;
         }
 
+
+        /* Learning */
+
         .learning-box {
             color: #b6bfd2;
             line-height: 1.75;
         }
 
+
+        /* Skills */
+
         .skill-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            margin-top: 18px;
+            margin-top: 20px;
         }
 
         .skill-tag {
@@ -333,6 +366,9 @@
             border-radius: 20px;
             font-size: 13px;
         }
+
+
+        /* Live dashboard */
 
         .experience-actions {
             margin-top: 25px;
@@ -596,6 +632,19 @@
                 padding: 25px;
             }
 
+
+            /* Dates stack under company on mobile */
+
+            .experience-top {
+                flex-direction: column;
+                gap: 3px;
+            }
+
+            .experience-date {
+                padding-top: 0;
+                margin-bottom: 4px;
+            }
+
         }
 
     </style>
@@ -781,14 +830,15 @@
 
 
     <h2 class="section-title">
+
         Experience
+
     </h2>
 
 
     <p class="section-subtitle">
 
-        Selected experience across business analytics, marketing effectiveness,
-        customer insights, and real-world marketing execution.
+        From marketing execution to marketing measurement and analytics product development.
 
     </p>
 
@@ -801,26 +851,32 @@
     <div class="experience-card">
 
 
-        <div class="experience-header">
+        <div class="experience-top">
 
             <h3>
                 HSD Metrics
             </h3>
 
-            <div class="experience-role">
-                Business Analytics Intern
+            <div class="experience-date">
+                Jun 2026 – Jul 2026
             </div>
 
-            <p class="experience-summary">
-
-                Turned a real business requirement into an interactive analytics
-                product designed to communicate the financial impact of employee
-                turnover and support the business case for employee-listening
-                solutions.
-
-            </p>
-
         </div>
+
+
+        <div class="experience-role">
+            Business Analytics Intern
+        </div>
+
+
+        <p class="experience-summary">
+
+            Turned a real business requirement into an interactive analytics
+            product designed to communicate the financial impact of employee
+            turnover and support the business case for employee-listening
+            solutions.
+
+        </p>
 
 
 
@@ -834,19 +890,20 @@
 
                 <li>
                     Translated stakeholder requirements and business rules into
-                    analytical calculations and an easy-to-use workflow.
+                    functional requirements, analytical calculations, workflows,
+                    and solution specifications.
                 </li>
 
                 <li>
                     Built the HSD HQ Brief using Python and Streamlit, combining
-                    turnover-cost estimates, ROI scenarios, interactive visualizations,
-                    and executive-ready reporting.
+                    automated KPI reporting, turnover-cost estimates, ROI scenarios,
+                    interactive visualizations, and executive-ready outputs.
                 </li>
 
                 <li>
-                    Designed the tool for non-technical users so they could enter
-                    organizational assumptions, compare scenarios, and understand
-                    the financial story behind the results.
+                    Refined the solution through testing, stakeholder feedback,
+                    documentation, and iterative improvements to strengthen usability
+                    and reporting efficiency.
                 </li>
 
             </ul>
@@ -864,8 +921,8 @@
             <div class="result-box">
 
                 Developed an end-to-end decision-support application that transformed
-                multiple business inputs into clear financial insights and generated
-                executive-ready outputs for business conversations.
+                business assumptions into clear financial insights, scenario comparisons,
+                visualizations, and executive-ready outputs for business conversations.
 
             </div>
 
@@ -882,9 +939,9 @@
             <p class="learning-box">
 
                 This experience strengthened my ability to move from an open-ended
-                business requirement to a working analytics product. I learned how
-                to balance analytical logic with usability, stakeholder communication,
-                and clear business storytelling.
+                stakeholder requirement to a working analytics product. I learned how
+                to balance business logic, analytical accuracy, usability, testing,
+                stakeholder communication, and clear data storytelling.
 
             </p>
 
@@ -900,6 +957,8 @@
 
             <span class="skill-tag">Pandas</span>
 
+            <span class="skill-tag">KPI Reporting</span>
+
             <span class="skill-tag">ROI Modeling</span>
 
             <span class="skill-tag">Scenario Analysis</span>
@@ -907,6 +966,8 @@
             <span class="skill-tag">Business Analysis</span>
 
             <span class="skill-tag">Data Visualization</span>
+
+            <span class="skill-tag">Requirements Gathering</span>
 
         </div>
 
@@ -938,26 +999,32 @@
     <div class="experience-card">
 
 
-        <div class="experience-header">
+        <div class="experience-top">
 
             <h3>
                 Kantar
             </h3>
 
-            <div class="experience-role">
-                Consultant – Data Strategy & Engineering
+            <div class="experience-date">
+                May 2022 – Dec 2023
             </div>
 
-            <p class="experience-summary">
-
-                Worked on marketing effectiveness and brand analytics engagements,
-                helping businesses understand what was driving performance, how
-                marketing investments were contributing to results, and where
-                future investment could be more effective.
-
-            </p>
-
         </div>
+
+
+        <div class="experience-role">
+            Consultant, Marketing Analytics & Data Strategy
+        </div>
+
+
+        <p class="experience-summary">
+
+            Worked on marketing effectiveness and brand analytics engagements,
+            helping businesses understand what was driving performance, how
+            marketing investments were contributing to results, and where
+            future investment could be more effective.
+
+        </p>
 
 
 
@@ -970,27 +1037,27 @@
             <ul>
 
                 <li>
-                    Supported end-to-end Marketing Mix Modeling across multiple
-                    markets and categories using sales, media, pricing, promotions,
-                    distribution, seasonality, and external business drivers.
+                    Delivered analytics work across global CPG/FMCG and
+                    financial-services engagements, including multi-market
+                    Marketing Mix Modeling and brand analytics projects.
                 </li>
 
                 <li>
-                    Built marketing KPIs, harmonized data, applied adstock and
-                    carryover concepts, and supported regression modeling and
-                    model diagnostics.
+                    Worked with sales, media, pricing, promotions, distribution,
+                    seasonality, and external business drivers; built marketing KPIs,
+                    harmonized data, and applied adstock and carryover concepts.
                 </li>
 
                 <li>
-                    Converted model outputs into channel contribution, ROI,
-                    response curves, and recommendations that supported marketing
-                    investment decisions.
+                    Supported regression modeling, model diagnostics, contribution
+                    analysis, ROI measurement, response curves, and marketing
+                    investment recommendations.
                 </li>
 
                 <li>
-                    Supported brand equity and ROE modeling to understand the
-                    drivers of brand favorability and consideration and translate
-                    statistical results into stakeholder-ready narratives.
+                    Supported brand equity and ROE modeling to understand drivers
+                    of brand favorability and consideration and translate statistical
+                    results into stakeholder-ready business narratives.
                 </li>
 
             </ul>
@@ -1027,11 +1094,10 @@
 
             <p class="learning-box">
 
-                Kantar taught me that a strong model is only valuable when it
-                answers the business question behind the analysis. I developed
-                a stronger understanding of how to connect statistical modeling
-                with marketing strategy, customer behavior, ROI, and stakeholder
-                communication.
+                Kantar taught me that a model is valuable only when it answers
+                the business question behind the analysis. I learned how to connect
+                statistical modeling with marketing strategy, customer behavior,
+                ROI, investment decisions, and stakeholder communication.
 
             </p>
 
@@ -1057,6 +1123,8 @@
 
             <span class="skill-tag">Customer Insights</span>
 
+            <span class="skill-tag">Marketing Measurement</span>
+
             <span class="skill-tag">Data Storytelling</span>
 
         </div>
@@ -1073,26 +1141,32 @@
     <div class="experience-card">
 
 
-        <div class="experience-header">
+        <div class="experience-top">
 
             <h3>
                 Mars Wrigley
             </h3>
 
-            <div class="experience-role">
-                Marketing Intern – Retail Promotions & Merchandising
+            <div class="experience-date">
+                Jan 2022 – Apr 2022
             </div>
 
-            <p class="experience-summary">
-
-                Gained direct exposure to how marketing strategy comes to life
-                at the point of purchase and how promotions, merchandising,
-                product visibility, and shopper behavior influence commercial
-                performance.
-
-            </p>
-
         </div>
+
+
+        <div class="experience-role">
+            Marketing Intern
+        </div>
+
+
+        <p class="experience-summary">
+
+            Gained direct exposure to how marketing strategy comes to life
+            at the point of purchase and how promotions, merchandising,
+            product visibility, and shopper behavior influence commercial
+            performance.
+
+        </p>
 
 
 
@@ -1116,8 +1190,9 @@
                 </li>
 
                 <li>
-                    Developed practical understanding of how marketing decisions
-                    influence consumer behavior and sales at the store level.
+                    Connected marketing plans with what actually happened at the
+                    point of purchase, building a practical understanding of
+                    consumer behavior and commercial performance.
                 </li>
 
             </ul>
@@ -1135,9 +1210,9 @@
             <div class="result-box">
 
                 Built a strong foundation in real-world marketing execution and
-                developed an understanding of how promotional strategy and
-                merchandising translate into shopper behavior and commercial
-                performance.
+                developed an understanding of how promotional strategy,
+                merchandising, and product visibility influence shopper behavior
+                and commercial performance.
 
             </div>
 
@@ -1153,10 +1228,11 @@
 
             <p class="learning-box">
 
-                Mars helped me understand marketing from the customer's point of
-                view — not only through numbers, but through how people experience
-                products, promotions, visibility, and merchandising at the point
-                of purchase.
+                Mars taught me to look at marketing from the customer's point
+                of view — not only through numbers, but through how shoppers
+                experience products, promotions, visibility, and merchandising.
+                That perspective later became valuable when interpreting marketing
+                analytics and customer data.
 
             </p>
 
@@ -1197,7 +1273,9 @@
 
 
     <h2 class="section-title">
+
         Featured Projects
+
     </h2>
 
 
