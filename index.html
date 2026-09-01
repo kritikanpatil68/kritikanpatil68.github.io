@@ -22,11 +22,9 @@
             box-sizing: border-box;
         }
 
-
         html {
             scroll-behavior: smooth;
         }
-
 
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -36,62 +34,39 @@
         }
 
 
-
         /* ========================================= */
         /* NAVIGATION */
         /* ========================================= */
 
         nav {
-
             position: fixed;
-
             top: 0;
-
             width: 100%;
-
             background: rgba(11, 16, 32, 0.96);
-
             padding: 20px 8%;
-
             display: flex;
-
             justify-content: flex-end;
-
             align-items: center;
-
             z-index: 1000;
         }
 
-
         nav ul {
-
             list-style: none;
-
             display: flex;
-
             gap: 34px;
-
             align-items: center;
         }
 
-
         nav a {
-
             text-decoration: none;
-
             color: #ffffff;
-
             font-size: 15px;
-
             transition: 0.3s;
         }
 
-
         nav a:hover {
-
             color: #8ea2ff;
         }
-
 
 
         /* ========================================= */
@@ -99,93 +74,55 @@
         /* ========================================= */
 
         .hero {
-
             min-height: 100vh;
-
             display: flex;
-
             align-items: center;
-
             justify-content: space-between;
-
             gap: 60px;
-
             padding: 120px 10% 80px;
 
             background:
-
                 radial-gradient(
                     circle at 80% 30%,
                     rgba(91, 108, 255, 0.25),
                     transparent 35%
                 ),
-
                 #0b1020;
         }
 
-
-
         .hero-content {
-
             flex: 1;
-
             max-width: 880px;
-
             min-width: 0;
         }
 
-
-
         .small-title {
-
             color: #9caeff;
-
             font-size: 18px;
-
             margin-bottom: 15px;
         }
 
-
-
         .hero h1 {
-
             font-size: 68px;
-
             line-height: 1.05;
-
             margin-bottom: 22px;
         }
 
-
-
         .hero h2 {
-
             font-size: 26px;
-
             font-weight: normal;
-
             color: #b9c1d9;
-
             margin-bottom: 28px;
-
             white-space: nowrap;
         }
 
-
-
         .hero p {
-
             max-width: 790px;
-
             font-size: 17px;
-
             color: #aeb6cc;
-
             margin-bottom: 35px;
-
             line-height: 1.7;
         }
-
 
 
         /* ========================================= */
@@ -193,42 +130,26 @@
         /* ========================================= */
 
         .hero-photo {
-
             flex: 0 0 340px;
-
             display: flex;
-
             justify-content: center;
-
             align-items: center;
         }
 
-
         .hero-photo img {
-
             width: 320px;
-
             height: 320px;
-
             object-fit: cover;
-
             object-position: center;
-
             border-radius: 50%;
-
             border: 5px solid rgba(102, 118, 255, 0.40);
-
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
-
             transition: 0.3s;
         }
 
-
         .hero-photo img:hover {
-
             transform: scale(1.03);
         }
-
 
 
         /* ========================================= */
@@ -236,62 +157,39 @@
         /* ========================================= */
 
         .buttons {
-
             display: flex;
-
             gap: 15px;
-
             flex-wrap: wrap;
         }
 
-
         .btn {
-
             display: inline-block;
-
             padding: 13px 24px;
-
             border-radius: 8px;
-
             text-decoration: none;
-
             font-weight: bold;
-
             transition: 0.3s;
         }
 
-
         .primary-btn {
-
             background: #6676ff;
-
             color: white;
         }
-
 
         .primary-btn:hover {
-
             background: #7886ff;
-
             transform: translateY(-2px);
         }
 
-
         .secondary-btn {
-
             border: 1px solid #6676ff;
-
             color: white;
         }
 
-
         .secondary-btn:hover {
-
             background: #6676ff;
-
             transform: translateY(-2px);
         }
-
 
 
         /* ========================================= */
@@ -299,28 +197,20 @@
         /* ========================================= */
 
         section {
-
             padding: 100px 10%;
         }
 
-
         .section-title {
-
             font-size: 38px;
-
             margin-bottom: 15px;
         }
 
-
         .section-subtitle {
-
             color: #9ba5bd;
-
             margin-bottom: 45px;
-
             max-width: 750px;
+            font-size: 17px;
         }
-
 
 
         /* ========================================= */
@@ -328,22 +218,23 @@
         /* ========================================= */
 
         .about {
-
             background: #101729;
         }
 
-
-        .about p {
-
-            max-width: 900px;
-
-            color: #c2c8d8;
-
-            font-size: 17px;
-
-            line-height: 1.8;
+        .about-content {
+            max-width: 1000px;
         }
 
+        .about p {
+            color: #c2c8d8;
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 22px;
+        }
+
+        .about strong {
+            color: #ffffff;
+        }
 
 
         /* ========================================= */
@@ -351,50 +242,32 @@
         /* ========================================= */
 
         .experience-card {
-
             background: #121a2d;
-
             padding: 28px;
-
             border-radius: 12px;
-
             margin-bottom: 20px;
-
             border: 1px solid #202b46;
-
             transition: 0.3s;
         }
 
-
         .experience-card:hover {
-
             transform: translateY(-3px);
-
             border-color: #6676ff;
         }
 
-
         .experience-card h3 {
-
             font-size: 23px;
-
             margin-bottom: 5px;
         }
 
-
         .experience-card h4 {
-
             color: #95a5ff;
-
             margin-bottom: 10px;
         }
 
-
         .experience-card p {
-
             color: #aeb7cb;
         }
-
 
 
         /* ========================================= */
@@ -402,68 +275,43 @@
         /* ========================================= */
 
         .projects {
-
             background: #101729;
         }
 
-
         .project-grid {
-
             display: grid;
-
             grid-template-columns: repeat(2, 1fr);
-
             gap: 25px;
         }
 
-
         .project-card {
-
             background: #151e33;
-
             border-radius: 14px;
-
             padding: 30px;
-
             border: 1px solid #283451;
-
             transition: 0.3s;
         }
 
-
         .project-card:hover {
-
             transform: translateY(-5px);
-
             border-color: #6676ff;
         }
 
-
         .project-card h3 {
-
             margin-bottom: 12px;
-
             font-size: 22px;
         }
 
-
         .project-card p {
-
             color: #abb4c9;
-
             margin-bottom: 15px;
         }
 
-
         .tools {
-
             color: #94a4ff;
-
             font-size: 14px;
-
             font-weight: bold;
         }
-
 
 
         /* ========================================= */
@@ -471,50 +319,32 @@
         /* ========================================= */
 
         .skills-grid {
-
             display: grid;
-
             grid-template-columns: repeat(4, 1fr);
-
             gap: 20px;
         }
 
-
         .skill-box {
-
             background: #121a2d;
-
             padding: 25px;
-
             border-radius: 10px;
-
             border: 1px solid transparent;
-
             transition: 0.3s;
         }
 
-
         .skill-box:hover {
-
             border-color: #6676ff;
-
             transform: translateY(-3px);
         }
 
-
         .skill-box h3 {
-
             margin-bottom: 15px;
-
             color: #9ba9ff;
         }
 
-
         .skill-box p {
-
             color: #b5bed0;
         }
-
 
 
         /* ========================================= */
@@ -522,20 +352,14 @@
         /* ========================================= */
 
         .contact {
-
             text-align: center;
-
             background: #101729;
         }
 
-
         .contact p {
-
             color: #b2bbce;
-
             margin-bottom: 30px;
         }
-
 
 
         /* ========================================= */
@@ -543,16 +367,11 @@
         /* ========================================= */
 
         footer {
-
             text-align: center;
-
             padding: 25px;
-
             background: #080d18;
-
             color: #7f899f;
         }
-
 
 
         /* ========================================= */
@@ -562,42 +381,29 @@
         @media (max-width: 1100px) {
 
             .hero {
-
                 gap: 35px;
-
                 padding-left: 7%;
-
                 padding-right: 7%;
             }
 
-
             .hero h1 {
-
                 font-size: 58px;
             }
 
-
             .hero h2 {
-
                 font-size: 22px;
             }
 
-
             .hero-photo {
-
                 flex-basis: 280px;
             }
 
-
             .hero-photo img {
-
                 width: 270px;
-
                 height: 270px;
             }
 
         }
-
 
 
         /* ========================================= */
@@ -606,161 +412,108 @@
 
         @media (max-width: 900px) {
 
-
             nav {
-
                 justify-content: center;
-
                 padding: 18px 5%;
             }
 
-
             nav ul {
-
                 gap: 18px;
             }
 
-
             .hero {
-
                 flex-direction: column-reverse;
-
                 text-align: center;
-
                 justify-content: center;
-
                 gap: 40px;
-
                 padding: 120px 7% 70px;
             }
 
-
             .hero-content {
-
                 max-width: 100%;
             }
 
-
             .hero h1 {
-
                 font-size: 50px;
             }
 
-
             .hero h2 {
-
                 font-size: 23px;
-
                 white-space: normal;
             }
 
-
             .hero p {
-
                 margin-left: auto;
-
                 margin-right: auto;
             }
 
-
             .hero-photo {
-
                 flex: none;
             }
 
-
             .hero-photo img {
-
                 width: 230px;
-
                 height: 230px;
             }
 
-
             .buttons {
-
                 justify-content: center;
             }
 
-
             .project-grid {
-
                 grid-template-columns: 1fr;
             }
 
-
             .skills-grid {
-
                 grid-template-columns: repeat(2, 1fr);
             }
 
         }
 
 
-
         @media (max-width: 600px) {
 
-
             nav ul {
-
                 gap: 12px;
             }
 
-
             nav ul li:nth-child(3),
-
             nav ul li:nth-child(5) {
-
                 display: none;
             }
 
-
             .hero h1 {
-
                 font-size: 42px;
             }
 
-
             .hero h2 {
-
                 font-size: 20px;
             }
 
-
             .hero p {
-
                 font-size: 16px;
             }
 
-
             .skills-grid {
-
                 grid-template-columns: 1fr;
             }
 
-
             section {
-
                 padding: 80px 7%;
             }
 
-
             .section-title {
-
                 font-size: 32px;
             }
 
         }
-
 
     </style>
 
 </head>
 
 
-
 <body>
-
 
 
 <!-- ========================================= -->
@@ -800,37 +553,25 @@
 </nav>
 
 
-
 <!-- ========================================= -->
 <!-- HOME -->
 <!-- ========================================= -->
 
 <section class="hero" id="home">
 
-
     <div class="hero-content">
 
-
         <div class="small-title">
-
             Hello, I'm
-
         </div>
 
-
         <h1>
-
             Kritika Patil
-
         </h1>
 
-
         <h2>
-
             Marketing Analytics • Business Analytics • Customer Insights
-
         </h2>
-
 
         <p>
 
@@ -845,9 +586,6 @@
 
         <div class="buttons">
 
-
-            <!-- VIEW WORK -->
-
             <a
                 href="#projects"
                 class="btn primary-btn">
@@ -856,9 +594,6 @@
 
             </a>
 
-
-
-            <!-- DOWNLOAD RESUME -->
 
             <a
                 href="Kritika_Patil_Resume.pdf"
@@ -870,9 +605,6 @@
             </a>
 
 
-
-            <!-- CONTACT -->
-
             <a
                 href="#contact"
                 class="btn secondary-btn">
@@ -881,12 +613,9 @@
 
             </a>
 
-
         </div>
 
-
     </div>
-
 
 
     <!-- PROFILE PHOTO -->
@@ -899,9 +628,7 @@
 
     </div>
 
-
 </section>
-
 
 
 <!-- ========================================= -->
@@ -913,34 +640,71 @@
     id="about">
 
 
-    <h2 class="section-title">
-
-        About Me
-
-    </h2>
+    <div class="about-content">
 
 
-    <p class="section-subtitle">
+        <h2 class="section-title">
 
-        Business understanding meets analytics.
+            About Me
 
-    </p>
+        </h2>
 
 
-    <p>
+        <p class="section-subtitle">
 
-        I'm a marketing and business analytics professional with experience
-        across marketing measurement, customer insights, business intelligence,
-        and analytical problem-solving. My background in marketing helps me
-        understand the business question behind the data, while my analytics
-        experience allows me to test those questions and translate the results
-        into practical recommendations.
+            Where marketing strategy, analytics, and AI come together.
 
-    </p>
+        </p>
 
+
+        <p>
+
+            <strong>
+                My career has grown at the intersection of marketing,
+                business strategy, and analytics.
+            </strong>
+
+            I started with an MBA in Marketing, which gave me a strong
+            understanding of consumer behavior, brand strategy, and
+            business decision-making. At Kantar, I moved deeper into
+            analytics through Marketing Mix Modeling, brand analytics,
+            ROI measurement, and multi-market projects.
+
+        </p>
+
+
+        <p>
+
+            To strengthen the technical side of my experience, I completed
+            an MS in Business Analytics and built hands-on capabilities
+            across SQL, Python, R, forecasting, statistical modeling,
+            machine learning, business intelligence, and AI-enabled
+            analytics. I’m particularly interested in how Generative AI
+            can improve analytical workflows, accelerate insight generation,
+            and help turn data into more accessible business solutions.
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                Today, my strength is combining marketing context,
+                analytical thinking, and emerging AI capabilities
+                to solve business problems.
+            </strong>
+
+            I start by understanding the customer and the decision that
+            needs to be made, then use data and technology to uncover what
+            is driving performance and translate that into clear,
+            practical recommendations.
+
+        </p>
+
+
+    </div>
 
 </section>
-
 
 
 <!-- ========================================= -->
@@ -964,25 +728,17 @@
     </p>
 
 
-
     <!-- KANTAR -->
 
     <div class="experience-card">
 
-
         <h3>
-
             Kantar
-
         </h3>
 
-
         <h4>
-
             Consultant – Data Strategy & Engineering
-
         </h4>
-
 
         <p>
 
@@ -992,29 +748,20 @@
 
         </p>
 
-
     </div>
-
 
 
     <!-- HSD METRICS -->
 
     <div class="experience-card">
 
-
         <h3>
-
             HSD Metrics
-
         </h3>
 
-
         <h4>
-
             Business Analytics
-
         </h4>
-
 
         <p>
 
@@ -1024,29 +771,20 @@
 
         </p>
 
-
     </div>
-
 
 
     <!-- MARS WRIGLEY -->
 
     <div class="experience-card">
 
-
         <h3>
-
             Mars Wrigley
-
         </h3>
 
-
         <h4>
-
             Marketing
-
         </h4>
-
 
         <p>
 
@@ -1055,12 +793,9 @@
 
         </p>
 
-
     </div>
 
-
 </section>
-
 
 
 <!-- ========================================= -->
@@ -1087,22 +822,16 @@
     </p>
 
 
-
     <div class="project-grid">
-
 
 
         <!-- PROJECT 1 -->
 
         <div class="project-card">
 
-
             <h3>
-
                 Marketing Mix Modeling
-
             </h3>
-
 
             <p>
 
@@ -1112,29 +841,22 @@
 
             </p>
 
-
             <div class="tools">
 
                 MMM • Regression • ROI Analysis • Marketing Analytics
 
             </div>
 
-
         </div>
-
 
 
         <!-- PROJECT 2 -->
 
         <div class="project-card">
 
-
             <h3>
-
                 Brand Equity Analytics
-
             </h3>
-
 
             <p>
 
@@ -1144,29 +866,22 @@
 
             </p>
 
-
             <div class="tools">
 
                 Regression • Customer Insights • Brand Analytics
 
             </div>
 
-
         </div>
-
 
 
         <!-- PROJECT 3 -->
 
         <div class="project-card">
 
-
             <h3>
-
                 HSD HQ Brief
-
             </h3>
-
 
             <p>
 
@@ -1176,29 +891,22 @@
 
             </p>
 
-
             <div class="tools">
 
                 Python • Streamlit • Pandas • Business Analytics
 
             </div>
 
-
         </div>
-
 
 
         <!-- PROJECT 4 -->
 
         <div class="project-card">
 
-
             <h3>
-
                 Smart Grocery Agent
-
             </h3>
-
 
             <p>
 
@@ -1208,29 +916,22 @@
 
             </p>
 
-
             <div class="tools">
 
                 Python • Streamlit • AI • Data Analytics
 
             </div>
 
-
         </div>
-
 
 
         <!-- PROJECT 5 -->
 
         <div class="project-card">
 
-
             <h3>
-
                 Customer Promotions Analytics
-
             </h3>
-
 
             <p>
 
@@ -1240,29 +941,22 @@
 
             </p>
 
-
             <div class="tools">
 
                 Customer Analytics • Statistics • Data Storytelling
 
             </div>
 
-
         </div>
-
 
 
         <!-- PROJECT 6 -->
 
         <div class="project-card">
 
-
             <h3>
-
                 Time Series Forecasting
-
             </h3>
-
 
             <p>
 
@@ -1272,22 +966,18 @@
 
             </p>
 
-
             <div class="tools">
 
                 R • Time Series • Forecasting • Model Evaluation
 
             </div>
 
-
         </div>
 
 
     </div>
 
-
 </section>
-
 
 
 <!-- ========================================= -->
@@ -1311,20 +1001,16 @@
     </p>
 
 
-
     <div class="skills-grid">
 
 
+        <!-- ANALYTICS -->
 
         <div class="skill-box">
 
-
             <h3>
-
                 Analytics
-
             </h3>
-
 
             <p>
 
@@ -1344,20 +1030,16 @@
 
             </p>
 
-
         </div>
 
 
+        <!-- PROGRAMMING -->
 
         <div class="skill-box">
 
-
             <h3>
-
                 Programming
-
             </h3>
-
 
             <p>
 
@@ -1371,20 +1053,16 @@
 
             </p>
 
-
         </div>
 
 
+        <!-- VISUALIZATION -->
 
         <div class="skill-box">
 
-
             <h3>
-
                 Visualization
-
             </h3>
-
 
             <p>
 
@@ -1401,20 +1079,16 @@
 
             </p>
 
-
         </div>
 
 
+        <!-- BUSINESS -->
 
         <div class="skill-box">
 
-
             <h3>
-
                 Business
-
             </h3>
-
 
             <p>
 
@@ -1431,15 +1105,12 @@
 
             </p>
 
-
         </div>
 
 
     </div>
 
-
 </section>
-
 
 
 <!-- ========================================= -->
@@ -1471,7 +1142,6 @@
         style="justify-content:center;">
 
 
-
         <!-- LINKEDIN -->
 
         <a
@@ -1482,7 +1152,6 @@
             LinkedIn
 
         </a>
-
 
 
         <!-- GITHUB -->
@@ -1499,9 +1168,7 @@
 
     </div>
 
-
 </section>
-
 
 
 <!-- ========================================= -->
