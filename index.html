@@ -1,1570 +1,581 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Kritika Patil | Analytics Portfolio</title>
-
-
-    <style>
-
-        /* ========================================= */
-        /* BASIC SETTINGS */
-        /* ========================================= */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #0b1020;
-            color: white;
-            line-height: 1.6;
-        }
-
-
-        /* ========================================= */
-        /* NAVIGATION */
-        /* ========================================= */
-
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(11, 16, 32, 0.96);
-            padding: 20px 8%;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 34px;
-            align-items: center;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #ffffff;
-            font-size: 15px;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: #8ea2ff;
-        }
-
-
-        /* ========================================= */
-        /* HOME */
-        /* ========================================= */
-
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 60px;
-            padding: 120px 10% 80px;
-
-            background:
-                radial-gradient(
-                    circle at 80% 30%,
-                    rgba(91, 108, 255, 0.25),
-                    transparent 35%
-                ),
-                #0b1020;
-        }
-
-        .hero-content {
-            flex: 1;
-            max-width: 880px;
-            min-width: 0;
-        }
-
-        .small-title {
-            color: #9caeff;
-            font-size: 18px;
-            margin-bottom: 15px;
-        }
-
-        .hero h1 {
-            font-size: 68px;
-            line-height: 1.05;
-            margin-bottom: 22px;
-        }
-
-        .hero h2 {
-            font-size: 26px;
-            font-weight: normal;
-            color: #b9c1d9;
-            margin-bottom: 28px;
-            white-space: nowrap;
-        }
-
-        .hero p {
-            max-width: 790px;
-            font-size: 17px;
-            color: #aeb6cc;
-            margin-bottom: 35px;
-            line-height: 1.7;
-        }
-
-
-        /* ========================================= */
-        /* PROFILE PHOTO */
-        /* ========================================= */
-
-        .hero-photo {
-            flex: 0 0 340px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero-photo img {
-            width: 320px;
-            height: 320px;
-            object-fit: cover;
-            object-position: center;
-            border-radius: 50%;
-            border: 5px solid rgba(102, 118, 255, 0.40);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
-            transition: 0.3s;
-        }
-
-        .hero-photo img:hover {
-            transform: scale(1.03);
-        }
-
-
-        /* ========================================= */
-        /* BUTTONS */
-        /* ========================================= */
-
-        .buttons {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 13px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .primary-btn {
-            background: #6676ff;
-            color: white;
-        }
-
-        .primary-btn:hover {
-            background: #7886ff;
-            transform: translateY(-2px);
-        }
-
-        .secondary-btn {
-            border: 1px solid #6676ff;
-            color: white;
-        }
-
-        .secondary-btn:hover {
-            background: #6676ff;
-            transform: translateY(-2px);
-        }
-
-
-        /* ========================================= */
-        /* GENERAL SECTIONS */
-        /* ========================================= */
-
-        section {
-            padding: 100px 10%;
-        }
-
-        .section-title {
-            font-size: 38px;
-            margin-bottom: 15px;
-        }
-
-        .section-subtitle {
-            color: #9ba5bd;
-            margin-bottom: 45px;
-            max-width: 850px;
-            font-size: 17px;
-        }
-
-
-        /* ========================================= */
-        /* ABOUT */
-        /* ========================================= */
-
-        .about {
-            background: #101729;
-        }
-
-        .about-content {
-            max-width: 1000px;
-        }
-
-        .about p {
-            color: #c2c8d8;
-            font-size: 17px;
-            line-height: 1.8;
-            margin-bottom: 22px;
-        }
-
-        .about strong {
-            color: #ffffff;
-        }
-
-
-        /* ========================================= */
-        /* EXPERIENCE */
-        /* ========================================= */
-
-        .experience-section {
-            background: #0b1020;
-        }
-
-        .experience-card {
-            background: #121a2d;
-            padding: 36px;
-            border-radius: 16px;
-            margin-bottom: 28px;
-            border: 1px solid #26314d;
-            transition: 0.3s;
-        }
-
-        .experience-card:hover {
-            transform: translateY(-4px);
-            border-color: #6676ff;
-        }
-
-
-        /* Company + date row */
-
-        .experience-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 25px;
-            margin-bottom: 4px;
-        }
-
-        .experience-top h3 {
-            font-size: 27px;
-            margin: 0;
-        }
-
-        .experience-date {
-            color: #aeb6cc;
-            font-size: 15px;
-            font-weight: bold;
-            white-space: nowrap;
-            padding-top: 6px;
-        }
-
-
-        /* Role */
-
-        .experience-role {
-            color: #95a5ff;
-            font-size: 17px;
-            font-weight: bold;
-            margin-bottom: 14px;
-        }
-
-
-        /* Intro summary */
-
-        .experience-summary {
-            color: #c1c9da;
-            font-size: 16px;
-            line-height: 1.75;
-            max-width: 1050px;
-        }
-
-
-        /* Internal experience sections */
-
-        .experience-block {
-            margin-top: 26px;
-        }
-
-        .experience-block h4 {
-            color: #ffffff;
-            font-size: 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 12px;
-        }
-
-        .experience-block ul {
-            padding-left: 22px;
-            color: #b6bfd2;
-        }
-
-        .experience-block li {
-            margin-bottom: 10px;
-            line-height: 1.7;
-        }
-
-
-        /* Result */
-
-        .result-box {
-            background: #0e1629;
-            border-left: 3px solid #6676ff;
-            padding: 18px 20px;
-            border-radius: 8px;
-            color: #c4ccdb;
-            line-height: 1.7;
-        }
-
-
-        /* Learning */
-
-        .learning-box {
-            color: #b6bfd2;
-            line-height: 1.75;
-        }
-
-
-        /* Skills */
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 20px;
-        }
-
-        .skill-tag {
-            background: rgba(102, 118, 255, 0.12);
-            border: 1px solid rgba(102, 118, 255, 0.35);
-            color: #aab4ff;
-            padding: 7px 13px;
-            border-radius: 20px;
-            font-size: 13px;
-        }
-
-
-        /* Live dashboard */
-
-        .experience-actions {
-            margin-top: 25px;
-        }
-
-        .experience-link {
-            display: inline-block;
-            background: #6676ff;
-            color: white;
-            padding: 11px 20px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 14px;
-            transition: 0.3s;
-        }
-
-        .experience-link:hover {
-            background: #7886ff;
-            transform: translateY(-2px);
-        }
-
-
-        /* ========================================= */
-        /* PROJECTS */
-        /* ========================================= */
-
-        .projects {
-            background: #101729;
-        }
-
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-        }
-
-        .project-card {
-            background: #151e33;
-            border-radius: 14px;
-            padding: 30px;
-            border: 1px solid #283451;
-            transition: 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            border-color: #6676ff;
-        }
-
-        .project-card h3 {
-            margin-bottom: 12px;
-            font-size: 22px;
-        }
-
-        .project-card p {
-            color: #abb4c9;
-            margin-bottom: 15px;
-        }
-
-        .tools {
-            color: #94a4ff;
-            font-size: 14px;
-            font-weight: bold;
-        }
-
-
-        /* ========================================= */
-        /* SKILLS */
-        /* ========================================= */
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-
-        .skill-box {
-            background: #121a2d;
-            padding: 25px;
-            border-radius: 10px;
-            border: 1px solid transparent;
-            transition: 0.3s;
-        }
-
-        .skill-box:hover {
-            border-color: #6676ff;
-            transform: translateY(-3px);
-        }
-
-        .skill-box h3 {
-            margin-bottom: 15px;
-            color: #9ba9ff;
-        }
-
-        .skill-box p {
-            color: #b5bed0;
-        }
-
-
-        /* ========================================= */
-        /* CONTACT */
-        /* ========================================= */
-
-        .contact {
-            text-align: center;
-            background: #101729;
-        }
-
-        .contact p {
-            color: #b2bbce;
-            margin-bottom: 30px;
-        }
-
-
-        /* ========================================= */
-        /* FOOTER */
-        /* ========================================= */
-
-        footer {
-            text-align: center;
-            padding: 25px;
-            background: #080d18;
-            color: #7f899f;
-        }
-
-
-        /* ========================================= */
-        /* TABLET */
-        /* ========================================= */
-
-        @media (max-width: 1100px) {
-
-            .hero {
-                gap: 35px;
-                padding-left: 7%;
-                padding-right: 7%;
-            }
-
-            .hero h1 {
-                font-size: 58px;
-            }
-
-            .hero h2 {
-                font-size: 22px;
-            }
-
-            .hero-photo {
-                flex-basis: 280px;
-            }
-
-            .hero-photo img {
-                width: 270px;
-                height: 270px;
-            }
-
-        }
-
-
-        /* ========================================= */
-        /* MOBILE */
-        /* ========================================= */
-
-        @media (max-width: 900px) {
-
-            nav {
-                justify-content: center;
-                padding: 18px 5%;
-            }
-
-            nav ul {
-                gap: 18px;
-            }
-
-            .hero {
-                flex-direction: column-reverse;
-                text-align: center;
-                justify-content: center;
-                gap: 40px;
-                padding: 120px 7% 70px;
-            }
-
-            .hero-content {
-                max-width: 100%;
-            }
-
-            .hero h1 {
-                font-size: 50px;
-            }
-
-            .hero h2 {
-                font-size: 23px;
-                white-space: normal;
-            }
-
-            .hero p {
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            .hero-photo {
-                flex: none;
-            }
-
-            .hero-photo img {
-                width: 230px;
-                height: 230px;
-            }
-
-            .buttons {
-                justify-content: center;
-            }
-
-            .project-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .skills-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-        }
-
-
-        @media (max-width: 600px) {
-
-            nav ul {
-                gap: 12px;
-            }
-
-            nav ul li:nth-child(3),
-            nav ul li:nth-child(5) {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 42px;
-            }
-
-            .hero h2 {
-                font-size: 20px;
-            }
-
-            .hero p {
-                font-size: 16px;
-            }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-
-            section {
-                padding: 80px 7%;
-            }
-
-            .section-title {
-                font-size: 32px;
-            }
-
-            .experience-card {
-                padding: 25px;
-            }
-
-
-            /* Dates stack under company on mobile */
-
-            .experience-top {
-                flex-direction: column;
-                gap: 3px;
-            }
-
-            .experience-date {
-                padding-top: 0;
-                margin-bottom: 4px;
-            }
-
-        }
-
-    </style>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kritika Patil | Analytics Portfolio</title>
+
+<meta name="description" content="Kritika Patil – Marketing and business analytics professional. Marketing Mix Modeling at Kantar, analytics apps in Python and Streamlit, MS in Business Analytics from the University of Cincinnati.">
+<meta property="og:title" content="Kritika Patil | Analytics Portfolio">
+<meta property="og:description" content="Marketing Mix Modeling, customer analytics and AI-enabled analytics tools. Kantar · HSD Metrics · MS Business Analytics, University of Cincinnati.">
+<meta property="og:image" content="https://kritikanpatil68.github.io/kritika-profile.jpeg">
+<meta property="og:url" content="https://kritikanpatil68.github.io/">
+<meta property="og:type" content="website">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%236676ff'/><text x='50' y='66' font-size='48' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>KP</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* ================= BASE ================= */
+:root {
+    --bg: #0b1020;
+    --bg-alt: #101729;
+    --card: #131b2f;
+    --border: #26314d;
+    --accent: #6676ff;
+    --accent-soft: #95a5ff;
+    --text: #ffffff;
+    --muted: #aeb6cc;
+    --dim: #8590a8;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+body {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+a { color: inherit; }
+section { padding: 90px 10%; }
+.section-title { font-size: 34px; font-weight: 700; margin-bottom: 10px; }
+.section-subtitle { color: var(--dim); font-size: 16px; margin-bottom: 40px; max-width: 760px; }
+
+/* ================= NAV ================= */
+nav {
+    position: fixed; top: 0; width: 100%; z-index: 1000;
+    background: rgba(11,16,32,0.95); backdrop-filter: blur(8px);
+    border-bottom: 1px solid #1c2540;
+    padding: 16px 8%;
+    display: flex; justify-content: space-between; align-items: center; gap: 20px;
+}
+.nav-brand { font-weight: 700; font-size: 18px; text-decoration: none; white-space: nowrap; }
+.nav-brand span { color: var(--accent-soft); }
+nav ul { list-style: none; display: flex; gap: 30px; }
+nav ul a { text-decoration: none; font-size: 15px; transition: .2s; }
+nav ul a:hover { color: var(--accent-soft); }
+
+/* ================= HERO ================= */
+.hero {
+    min-height: 92vh;
+    display: flex; align-items: center; justify-content: space-between; gap: 60px;
+    padding: 120px 10% 70px;
+    background: radial-gradient(circle at 82% 30%, rgba(91,108,255,0.22), transparent 38%), var(--bg);
+}
+.hero-content { flex: 1; min-width: 0; max-width: 820px; }
+.eyebrow {
+    color: #9caeff; font-size: 14px; font-weight: 600;
+    letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 14px;
+}
+.hero h1 { font-size: 64px; font-weight: 800; line-height: 1.05; margin-bottom: 16px; }
+.hero h2 { font-size: 24px; font-weight: 500; color: #c3cae0; margin-bottom: 20px; }
+.hero p { font-size: 17px; color: var(--muted); max-width: 720px; line-height: 1.7; margin-bottom: 28px; }
+
+.proof-strip {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
+    margin-bottom: 30px; max-width: 760px;
+}
+.proof {
+    background: rgba(102,118,255,0.08);
+    border: 1px solid rgba(102,118,255,0.28);
+    border-radius: 12px; padding: 14px 16px;
+}
+.proof strong { display: block; font-size: 22px; font-weight: 800; color: #fff; line-height: 1.2; }
+.proof span { font-size: 13px; color: var(--muted); }
+
+.buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn {
+    display: inline-block; padding: 12px 22px; border-radius: 8px;
+    text-decoration: none; font-weight: 600; font-size: 15px; transition: .2s;
+}
+.btn-primary { background: var(--accent); }
+.btn-primary:hover { background: #7886ff; transform: translateY(-2px); }
+.btn-outline { border: 1px solid var(--accent); }
+.btn-outline:hover { background: var(--accent); transform: translateY(-2px); }
+
+.hero-photo img {
+    width: 280px; height: 280px; object-fit: cover; border-radius: 50%;
+    border: 5px solid rgba(102,118,255,0.4);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+}
+
+/* ================= PROJECTS ================= */
+.projects { background: var(--bg-alt); }
+.project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.project-card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 16px;
+    overflow: hidden; display: flex; flex-direction: column; transition: .25s;
+}
+.project-card:hover { transform: translateY(-4px); border-color: var(--accent); }
+.project-banner {
+    height: 110px; padding: 20px 24px;
+    display: flex; align-items: flex-end; justify-content: space-between;
+}
+.project-banner .label {
+    font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+    background: rgba(0,0,0,0.35); padding: 5px 10px; border-radius: 20px;
+}
+.project-banner .icon { font-size: 40px; }
+.b1 { background: linear-gradient(135deg, #3b48c9, #6d4bd1); }
+.b2 { background: linear-gradient(135deg, #0f7a6b, #1c9f7c); }
+.b3 { background: linear-gradient(135deg, #a3482f, #d2793b); }
+.b4 { background: linear-gradient(135deg, #2b5f9e, #3a8bc4); }
+.b5 { background: linear-gradient(135deg, #5a3a8c, #8a4f9e); }
+.project-body { padding: 24px; display: flex; flex-direction: column; flex: 1; }
+.project-body h3 { font-size: 21px; margin-bottom: 8px; }
+.project-body p { color: var(--muted); font-size: 15px; margin-bottom: 14px; }
+.project-body p strong { color: #fff; }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+.tag {
+    background: rgba(102,118,255,0.12); border: 1px solid rgba(102,118,255,0.32);
+    color: #aab4ff; padding: 5px 11px; border-radius: 20px; font-size: 12.5px;
+}
+.project-links { display: flex; gap: 10px; flex-wrap: wrap; margin-top: auto; }
+.link-btn {
+    font-size: 14px; font-weight: 600; text-decoration: none;
+    padding: 9px 16px; border-radius: 8px; transition: .2s;
+}
+.link-solid { background: var(--accent); }
+.link-solid:hover { background: #7886ff; }
+.link-ghost { border: 1px solid #3a4770; }
+.link-ghost:hover { border-color: var(--accent); }
+
+/* ================= EXPERIENCE ================= */
+.exp-card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 16px;
+    padding: 30px 32px; margin-bottom: 22px; transition: .25s;
+}
+.exp-card:hover { border-color: var(--accent); }
+.exp-top { display: flex; justify-content: space-between; gap: 20px; align-items: baseline; }
+.exp-top h3 { font-size: 24px; }
+.exp-date { color: var(--muted); font-size: 14px; font-weight: 600; white-space: nowrap; }
+.exp-role { color: var(--accent-soft); font-weight: 600; margin: 2px 0 14px; }
+.exp-headline {
+    background: #0e1629; border-left: 3px solid var(--accent);
+    padding: 12px 16px; border-radius: 8px; color: #fff; font-weight: 600;
+    margin-bottom: 16px;
+}
+.exp-card ul { padding-left: 20px; color: #b9c2d6; }
+.exp-card li { margin-bottom: 9px; }
+.exp-card li strong { color: #fff; }
+.sub-project { color: var(--accent-soft); font-size: 15px; font-weight: 600; margin: 18px 0 10px; }
+
+details { margin-top: 10px; }
+summary {
+    cursor: pointer; color: var(--accent-soft); font-weight: 600; font-size: 14px;
+    list-style: none; display: inline-block; padding: 6px 0;
+}
+summary::-webkit-details-marker { display: none; }
+summary::after { content: " +"; }
+details[open] summary::after { content: " −"; }
+details[open] summary { margin-bottom: 6px; }
+.result { color: #c4ccdb; margin-top: 8px; font-size: 15px; }
+.result strong { color: #fff; }
+
+/* ================= SKILLS ================= */
+.skills { background: var(--bg-alt); }
+.skills-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.skill-box { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px; }
+.skill-box h3 { color: var(--accent-soft); font-size: 16px; margin-bottom: 12px; }
+.skill-box ul { list-style: none; color: #c0c8da; font-size: 15px; }
+.skill-box li { padding: 3px 0; }
+
+/* ================= EDUCATION ================= */
+.edu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.edu-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px; }
+.edu-card h3 { font-size: 17px; margin-bottom: 4px; }
+.edu-card p { color: var(--muted); font-size: 14.5px; }
+
+/* ================= ABOUT ================= */
+.about { background: var(--bg-alt); }
+.about p { color: #c2c8d8; font-size: 17px; line-height: 1.8; max-width: 900px; }
+
+/* ================= CONTACT ================= */
+.contact { text-align: center; }
+.contact p { color: var(--muted); margin-bottom: 22px; }
+.contact-email {
+    display: inline-block; font-size: 20px; font-weight: 600; text-decoration: none;
+    border-bottom: 2px solid var(--accent); margin-bottom: 28px;
+}
+.contact .buttons { justify-content: center; }
+footer { text-align: center; padding: 24px; background: #080d18; color: #7f899f; font-size: 14px; }
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1100px) {
+    .hero { padding-left: 7%; padding-right: 7%; gap: 36px; }
+    .hero h1 { font-size: 54px; }
+    .hero-photo img { width: 230px; height: 230px; }
+    .skills-grid { grid-template-columns: repeat(2, 1fr); }
+    nav ul { gap: 22px; }
+}
+@media (max-width: 900px) {
+    nav { flex-direction: column; gap: 8px; padding: 12px 5%; }
+    nav ul { flex-wrap: wrap; justify-content: center; gap: 6px 18px; }
+    .hero { flex-direction: column-reverse; text-align: center; padding: 130px 6% 60px; }
+    .hero p { margin-left: auto; margin-right: auto; }
+    .proof-strip { grid-template-columns: repeat(2, 1fr); margin-left: auto; margin-right: auto; }
+    .buttons { justify-content: center; }
+    .hero-photo img { width: 180px; height: 180px; }
+    .project-grid, .edu-grid { grid-template-columns: 1fr; }
+    section { padding: 70px 6%; }
+}
+@media (max-width: 600px) {
+    .hero h1 { font-size: 40px; }
+    .hero h2 { font-size: 19px; }
+    .proof strong { font-size: 19px; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .section-title { font-size: 28px; }
+    .exp-card { padding: 22px; }
+    .exp-top { flex-direction: column; gap: 0; }
+    .contact-email { font-size: 17px; }
+    nav ul a { font-size: 14px; }
+}
+</style>
 </head>
-
 
 <body>
 
-
-<!-- ========================================= -->
-<!-- NAVIGATION -->
-<!-- ========================================= -->
-
+<!-- ================= NAVIGATION ================= -->
 <nav>
-
+    <a href="#home" class="nav-brand">Kritika <span>Patil</span></a>
     <ul>
-
-        <li><a href="#home">Home</a></li>
-
-        <li><a href="#about">About</a></li>
-
-        <li><a href="#experience">Experience</a></li>
-
         <li><a href="#projects">Projects</a></li>
-
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
-
+        <li><a href="#education">Education</a></li>
         <li><a href="#contact">Contact</a></li>
-
     </ul>
-
 </nav>
 
 
-<!-- ========================================= -->
-<!-- HOME -->
-<!-- ========================================= -->
-
+<!-- ================= HERO ================= -->
 <section class="hero" id="home">
-
     <div class="hero-content">
-
-        <div class="small-title">
-            Hello, I'm
-        </div>
-
-        <h1>
-            Kritika Patil
-        </h1>
-
-        <h2>
-            Marketing Analytics • Business Analytics • Customer Insights
-        </h2>
-
+        <div class="eyebrow">Analytics Portfolio</div>
+        <h1>Kritika Patil</h1>
+        <h2>Marketing Analytics · Business Analytics · Customer Insights</h2>
         <p>
-            I combine marketing strategy, business understanding, and analytics
-            to uncover what drives performance. With experience across marketing
-            measurement, MMM, ROI, customer insights, and forecasting, I turn
-            complex data into clear recommendations that support smarter business
-            decisions.
+            Two years of Marketing Mix Modeling and brand analytics consulting at Kantar,
+            an MS in Business Analytics from the University of Cincinnati, and hands-on
+            experience building Python and AI-enabled analytics apps. I find what drives
+            performance and turn it into decisions on where to invest next.
         </p>
 
+        <div class="proof-strip">
+            <div class="proof"><strong>2 yrs</strong><span>MMM consulting at Kantar</span></div>
+            <div class="proof"><strong>90%+</strong><span>Client CSAT on projects</span></div>
+            <div class="proof"><strong>10–12%</strong><span>Business lift from model recs</span></div>
+            <div class="proof"><strong>2 live</strong><span>Analytics apps deployed</span></div>
+        </div>
 
         <div class="buttons">
-
-            <a
-                href="#projects"
-                class="btn primary-btn">
-
-                View My Work
-
-            </a>
-
-
-            <a
-                href="Kritika_Patil_Resume.pdf"
-                download
-                class="btn secondary-btn">
-
-                Download Resume
-
-            </a>
-
-
-            <a
-                href="#contact"
-                class="btn secondary-btn">
-
-                Contact Me
-
-            </a>
-
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="Kritika_Patil_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Resume</a>
+            <a href="https://www.linkedin.com/in/kritika-patil-a21aa3185/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">LinkedIn</a>
+            <a href="https://github.com/kritikanpatil68" target="_blank" rel="noopener noreferrer" class="btn btn-outline">GitHub</a>
         </div>
-
     </div>
-
 
     <div class="hero-photo">
-
-        <img
-            src="kritika-profile.jpeg"
-            alt="Kritika Patil">
-
+        <img src="kritika-profile.jpeg" alt="Portrait of Kritika Patil">
     </div>
-
 </section>
 
 
-<!-- ========================================= -->
-<!-- ABOUT -->
-<!-- ========================================= -->
-
-<section class="about" id="about">
-
-    <div class="about-content">
-
-        <h2 class="section-title">
-            About Me
-        </h2>
-
-        <p class="section-subtitle">
-            Where marketing strategy, analytics, and AI come together.
-        </p>
-
-
-        <p>
-
-            <strong>
-                My career has grown at the intersection of marketing,
-                business strategy, and analytics.
-            </strong>
-
-            I started with an MBA in Marketing, which gave me a strong
-            understanding of consumer behavior, brand strategy, and
-            business decision-making. At Kantar, I moved deeper into
-            analytics through Marketing Mix Modeling, brand analytics,
-            ROI measurement, and multi-market projects.
-
-        </p>
-
-
-        <p>
-
-            To strengthen the technical side of my experience, I completed
-            an MS in Business Analytics and built hands-on capabilities
-            across SQL, Python, R, forecasting, statistical modeling,
-            machine learning, business intelligence, and AI-enabled
-            analytics. I’m particularly interested in how Generative AI
-            can improve analytical workflows, accelerate insight generation,
-            and help turn data into more accessible business solutions.
-
-        </p>
-
-
-        <p>
-
-            <strong>
-                Today, my strength is combining marketing context,
-                analytical thinking, and emerging AI capabilities
-                to solve business problems.
-            </strong>
-
-            I start by understanding the customer and the decision that
-            needs to be made, then use data and technology to uncover what
-            is driving performance and translate that into clear,
-            practical recommendations.
-
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- ========================================= -->
-<!-- EXPERIENCE -->
-<!-- ========================================= -->
-
-<section
-    class="experience-section"
-    id="experience">
-
-
-    <h2 class="section-title">
-
-        Experience
-
-    </h2>
-
-
-    <p class="section-subtitle">
-
-        From marketing execution to marketing measurement and analytics product development.
-
-    </p>
-
-
-
-    <!-- ========================================= -->
-    <!-- HSD METRICS -->
-    <!-- ========================================= -->
-
-    <div class="experience-card">
-
-
-        <div class="experience-top">
-
-            <h3>
-                HSD Metrics
-            </h3>
-
-            <div class="experience-date">
-                Jun 2026 – Jul 2026
-            </div>
-
-        </div>
-
-
-        <div class="experience-role">
-            Business Analytics Intern
-        </div>
-
-
-        <p class="experience-summary">
-
-            Turned a real business requirement into an interactive analytics
-            product designed to communicate the financial impact of employee
-            turnover and support the business case for employee-listening
-            solutions.
-
-        </p>
-
-
-
-        <div class="experience-block">
-
-            <h4>
-                What I Worked On
-            </h4>
-
-            <ul>
-
-                <li>
-                    Translated stakeholder requirements and business rules into
-                    functional requirements, analytical calculations, workflows,
-                    and solution specifications.
-                </li>
-
-                <li>
-                    Built the HSD HQ Brief using Python and Streamlit, combining
-                    automated KPI reporting, turnover-cost estimates, ROI scenarios,
-                    interactive visualizations, and executive-ready outputs.
-                </li>
-
-                <li>
-                    Refined the solution through testing, stakeholder feedback,
-                    documentation, and iterative improvements to strengthen usability
-                    and reporting efficiency.
-                </li>
-
-            </ul>
-
-        </div>
-
-
-
-        <div class="experience-block">
-
-            <h4>
-                Result
-            </h4>
-
-            <div class="result-box">
-
-                Developed an end-to-end decision-support application that transformed
-                business assumptions into clear financial insights, scenario comparisons,
-                visualizations, and executive-ready outputs for business conversations.
-
-            </div>
-
-        </div>
-
-
-
-        <div class="experience-block">
-
-            <h4>
-                What I Learned
-            </h4>
-
-            <p class="learning-box">
-
-                This experience strengthened my ability to move from an open-ended
-                stakeholder requirement to a working analytics product. I learned how
-                to balance business logic, analytical accuracy, usability, testing,
-                stakeholder communication, and clear data storytelling.
-
-            </p>
-
-        </div>
-
-
-
-        <div class="skill-tags">
-
-            <span class="skill-tag">Python</span>
-
-            <span class="skill-tag">Streamlit</span>
-
-            <span class="skill-tag">Pandas</span>
-
-            <span class="skill-tag">KPI Reporting</span>
-
-            <span class="skill-tag">ROI Modeling</span>
-
-            <span class="skill-tag">Scenario Analysis</span>
-
-            <span class="skill-tag">Business Analysis</span>
-
-            <span class="skill-tag">Data Visualization</span>
-
-            <span class="skill-tag">Requirements Gathering</span>
-
-        </div>
-
-
-
-        <div class="experience-actions">
-
-            <a
-                href="https://hsd-hq-brief-zwapplycc8pzctbw8efkej5.streamlit.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="experience-link">
-
-                View Live Dashboard
-
-            </a>
-
-        </div>
-
-
-    </div>
-
-
-
-    <!-- ========================================= -->
-    <!-- KANTAR -->
-    <!-- ========================================= -->
-
-    <div class="experience-card">
-
-
-        <div class="experience-top">
-
-            <h3>
-                Kantar
-            </h3>
-
-            <div class="experience-date">
-                May 2022 – Dec 2023
-            </div>
-
-        </div>
-
-
-        <div class="experience-role">
-            Consultant, Marketing Analytics & Data Strategy
-        </div>
-
-
-        <p class="experience-summary">
-
-            Worked on marketing effectiveness and brand analytics engagements,
-            helping businesses understand what was driving performance, how
-            marketing investments were contributing to results, and where
-            future investment could be more effective.
-
-        </p>
-
-
-
-        <div class="experience-block">
-
-            <h4>
-                What I Worked On
-            </h4>
-
-            <ul>
-
-                <li>
-                    Delivered analytics work across global CPG/FMCG and
-                    financial-services engagements, including multi-market
-                    Marketing Mix Modeling and brand analytics projects.
-                </li>
-
-                <li>
-                    Worked with sales, media, pricing, promotions, distribution,
-                    seasonality, and external business drivers; built marketing KPIs,
-                    harmonized data, and applied adstock and carryover concepts.
-                </li>
-
-                <li>
-                    Supported regression modeling, model diagnostics, contribution
-                    analysis, ROI measurement, response curves, and marketing
-                    investment recommendations.
-                </li>
-
-                <li>
-                    Supported brand equity and ROE modeling to understand drivers
-                    of brand favorability and consideration and translate statistical
-                    results into stakeholder-ready business narratives.
-                </li>
-
-            </ul>
-
-        </div>
-
-
-
-        <div class="experience-block">
-
-            <h4>
-                Result
-            </h4>
-
-            <div class="result-box">
-
-                Helped translate complex marketing and brand data into actionable
-                recommendations while maintaining project CSAT above 90% and
-                rework below 5%. On a financial-services engagement, modeling
-                recommendations contributed to approximately 10–12% improvement
-                in business performance.
-
-            </div>
-
-        </div>
-
-
-
-        <div class="experience-block">
-
-            <h4>
-                What I Learned
-            </h4>
-
-            <p class="learning-box">
-
-                Kantar taught me that a model is valuable only when it answers
-                the business question behind the analysis. I learned how to connect
-                statistical modeling with marketing strategy, customer behavior,
-                ROI, investment decisions, and stakeholder communication.
-
-            </p>
-
-        </div>
-
-
-
-        <div class="skill-tags">
-
-            <span class="skill-tag">Marketing Mix Modeling</span>
-
-            <span class="skill-tag">Regression</span>
-
-            <span class="skill-tag">Adstock</span>
-
-            <span class="skill-tag">Carryover</span>
-
-            <span class="skill-tag">ROI Analysis</span>
-
-            <span class="skill-tag">Response Curves</span>
-
-            <span class="skill-tag">Brand Analytics</span>
-
-            <span class="skill-tag">Customer Insights</span>
-
-            <span class="skill-tag">Marketing Measurement</span>
-
-            <span class="skill-tag">Data Storytelling</span>
-
-        </div>
-
-
-    </div>
-
-
-
-    <!-- ========================================= -->
-    <!-- MARS WRIGLEY -->
-    <!-- ========================================= -->
-
-    <div class="experience-card">
-
-
-        <div class="experience-top">
-
-            <h3>
-                Mars Wrigley
-            </h3>
-
-            <div class="experience-date">
-                Jan 2022 – Apr 2022
-            </div>
-
-        </div>
-
-
-        <div class="experience-role">
-            Marketing Intern
-        </div>
-
-
-        <p class="experience-summary">
-
-            Gained direct exposure to how marketing strategy comes to life
-            at the point of purchase and how promotions, merchandising,
-            product visibility, and shopper behavior influence commercial
-            performance.
-
-        </p>
-
-
-
-        <div class="experience-block">
-
-            <h4>
-                What I Worked On
-            </h4>
-
-            <ul>
-
-                <li>
-                    Supported in-store promotional and merchandising activities
-                    across retail environments.
-                </li>
-
-                <li>
-                    Observed product placement, visibility, promotional execution,
-                    and shopper response to identify opportunities for stronger
-                    retail execution.
-                </li>
-
-                <li>
-                    Connected marketing plans with what actually happened at the
-                    point of purchase, building a practical understanding of
-                    consumer behavior and commercial performance.
-                </li>
-
-            </ul>
-
-        </div>
-
-
-
-        <div class="experience-block">
-
-            <h4>
-                Result
-            </h4>
-
-            <div class="result-box">
-
-                Built a strong foundation in real-world marketing execution and
-                developed an understanding of how promotional strategy,
-                merchandising, and product visibility influence shopper behavior
-                and commercial performance.
-
-            </div>
-
-        </div>
-
-
-
-        <div class="experience-block">
-
-            <h4>
-                What I Learned
-            </h4>
-
-            <p class="learning-box">
-
-                Mars taught me to look at marketing from the customer's point
-                of view — not only through numbers, but through how shoppers
-                experience products, promotions, visibility, and merchandising.
-                That perspective later became valuable when interpreting marketing
-                analytics and customer data.
-
-            </p>
-
-        </div>
-
-
-
-        <div class="skill-tags">
-
-            <span class="skill-tag">Retail Marketing</span>
-
-            <span class="skill-tag">Promotions</span>
-
-            <span class="skill-tag">Merchandising</span>
-
-            <span class="skill-tag">Consumer Behavior</span>
-
-            <span class="skill-tag">Retail Execution</span>
-
-            <span class="skill-tag">Commercial Thinking</span>
-
-        </div>
-
-
-    </div>
-
-
-</section>
-
-
-<!-- ========================================= -->
-<!-- PROJECTS -->
-<!-- ========================================= -->
-
-<section
-    class="projects"
-    id="projects">
-
-
-    <h2 class="section-title">
-
-        Featured Projects
-
-    </h2>
-
-
-    <p class="section-subtitle">
-
-        Selected work across marketing analytics, customer analytics,
-        business intelligence and AI.
-
-    </p>
-
+<!-- ================= PROJECTS ================= -->
+<section class="projects" id="projects">
+    <h2 class="section-title">Featured Projects</h2>
+    <p class="section-subtitle">Live tools and models across marketing analytics, customer analytics and AI.</p>
 
     <div class="project-grid">
 
-
+        <!-- PROJECT 1: HSD HQ Brief -->
         <div class="project-card">
-
-            <h3>
-                Marketing Mix Modeling
-            </h3>
-
-            <p>
-                Evaluated marketing channel contribution, ROI,
-                response curves and optimization opportunities
-                to support marketing investment decisions.
-            </p>
-
-            <div class="tools">
-                MMM • Regression • ROI Analysis • Marketing Analytics
+            <div class="project-banner b1">
+                <span class="label">Live App · Internship</span>
+                <span class="icon">📊</span>
             </div>
-
+            <div class="project-body">
+                <h3>HSD HQ Brief: Pre-Sales ROI Tool</h3>
+                <p>
+                    Turns six prospect inputs into turnover cost, savings scenarios and a
+                    <strong>one-click branded client report</strong>, giving sales reps a
+                    quantified business case in a single conversation.
+                </p>
+                <div class="tags">
+                    <span class="tag">Python</span><span class="tag">Streamlit</span>
+                    <span class="tag">Plotly</span><span class="tag">python-docx</span>
+                    <span class="tag">ROI Modeling</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://hsd-hq-brief-zwapplycc8pzctbw8efkej5.streamlit.app/" target="_blank" rel="noopener noreferrer" class="link-btn link-solid">Live Demo</a>
+                </div>
+            </div>
         </div>
 
-
+        <!-- PROJECT 2: Capstone -->
+        <!-- TODO: replace the GitHub link below with the capstone repo link -->
         <div class="project-card">
-
-            <h3>
-                Brand Equity Analytics
-            </h3>
-
-            <p>
-                Analyzed the impact of media, customer experience,
-                reputation and other business drivers on brand
-                favorability and consideration.
-            </p>
-
-            <div class="tools">
-                Regression • Customer Insights • Brand Analytics
+            <div class="project-banner b5">
+                <span class="label">Capstone · AI + NLP</span>
+                <span class="icon">🧠</span>
             </div>
-
+            <div class="project-body">
+                <h3>AI-Powered Customer Voice &amp; Revenue Intelligence</h3>
+                <p>
+                    Combines <strong>NLP sentiment analysis</strong> of customer reviews with
+                    <strong>revenue forecasting</strong> in one Streamlit dashboard, linking what
+                    customers say to where revenue is heading.
+                </p>
+                <div class="tags">
+                    <span class="tag">NLP</span><span class="tag">XGBoost</span>
+                    <span class="tag">Prophet</span><span class="tag">SHAP</span>
+                    <span class="tag">Streamlit</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/kritikanpatil68" target="_blank" rel="noopener noreferrer" class="link-btn link-ghost">View on GitHub</a>
+                </div>
+            </div>
         </div>
 
-
+        <!-- PROJECT 3: CPG Promotions / Pricing -->
+        <!-- TODO: replace the GitHub link below with this project's repo link -->
         <div class="project-card">
-
-            <h3>
-                HSD HQ Brief
-            </h3>
-
-            <p>
-                Built an interactive analytics tool that converts
-                business inputs into turnover-cost estimates,
-                ROI scenarios and executive-ready reporting.
-            </p>
-
-            <div class="tools">
-                Python • Streamlit • Pandas • Business Analytics
+            <div class="project-banner b3">
+                <span class="label">Customer Analytics · CPG</span>
+                <span class="icon">🛒</span>
             </div>
-
+            <div class="project-body">
+                <h3>CPG Pricing, Promotions &amp; Retention</h3>
+                <p>
+                    Analyzed household purchase data to estimate <strong>price elasticity</strong>,
+                    measure how promotions affect retention and basket size, and build a
+                    <strong>budget optimizer</strong> for promotional spend.
+                </p>
+                <div class="tags">
+                    <span class="tag">Python</span><span class="tag">Price Elasticity</span>
+                    <span class="tag">Causal Analysis</span><span class="tag">Optimization</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/kritikanpatil68" target="_blank" rel="noopener noreferrer" class="link-btn link-ghost">View on GitHub</a>
+                </div>
+            </div>
         </div>
 
-
+        <!-- PROJECT 4: Smart Grocery Agent -->
         <div class="project-card">
-
-            <h3>
-                Smart Grocery Agent
-            </h3>
-
-            <p>
-                Developed an intelligent grocery-management application
-                that prioritizes expiring items and provides actionable
-                recommendations to reduce food waste.
-            </p>
-
-            <div class="tools">
-                Python • Streamlit • AI • Data Analytics
+            <div class="project-banner b2">
+                <span class="label">Live App · AI</span>
+                <span class="icon">🥦</span>
             </div>
-
-        </div>
-
-
-        <div class="project-card">
-
-            <h3>
-                Customer Promotions Analytics
-            </h3>
-
-            <p>
-                Analyzed customer purchase behavior to evaluate the
-                relationship between promotions, retention and
-                basket size.
-            </p>
-
-            <div class="tools">
-                Customer Analytics • Statistics • Data Storytelling
+            <div class="project-body">
+                <h3>Smart Grocery &amp; Expiry Agent</h3>
+                <p>
+                    An AI-assisted app that tracks groceries and expiry dates,
+                    <strong>prioritizes what to use first</strong> and suggests recipes to
+                    cut household food waste.
+                </p>
+                <div class="tags">
+                    <span class="tag">Python</span><span class="tag">Streamlit</span>
+                    <span class="tag">OpenAI API</span><span class="tag">Product Thinking</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://smart-grocery-kritika.streamlit.app/" target="_blank" rel="noopener noreferrer" class="link-btn link-solid">Live Demo</a>
+                </div>
             </div>
-
         </div>
-
-
-        <div class="project-card">
-
-            <h3>
-                Time Series Forecasting
-            </h3>
-
-            <p>
-                Compared forecasting approaches and evaluated model
-                performance to identify reliable methods for
-                predicting future business trends.
-            </p>
-
-            <div class="tools">
-                R • Time Series • Forecasting • Model Evaluation
-            </div>
-
-        </div>
-
 
     </div>
-
 </section>
 
 
-<!-- ========================================= -->
-<!-- SKILLS -->
-<!-- ========================================= -->
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience">
+    <h2 class="section-title">Experience</h2>
+    <p class="section-subtitle">From the retail shelf to marketing measurement to analytics products.</p>
 
-<section id="skills">
+    <!-- HSD METRICS -->
+    <div class="exp-card">
+        <div class="exp-top">
+            <h3>HSD Metrics</h3>
+            <div class="exp-date">Jun 2026 – Jul 2026</div>
+        </div>
+        <div class="exp-role">Business Analytics Intern</div>
+        <div class="exp-headline">Built a live pre-sales ROI tool that turns prospect data into a one-click client report.</div>
+        <ul>
+            <li><strong>Designed</strong> a Streamlit dashboard that converts six prospect inputs into annual turnover cost, total cost exposure and platform cost estimates.</li>
+            <li><strong>Automated</strong> a branded one-page Word report with python-docx, replacing manual report building with a one-click download.</li>
+        </ul>
+        <details>
+            <summary>See full details</summary>
+            <ul>
+                <li><strong>Modeled</strong> multiple savings scenarios and visualized current versus projected costs in interactive Plotly charts for prospect calls.</li>
+                <li><strong>Simplified</strong> inputs, sharpened charts and tightened calculations across stakeholder feedback rounds, then deployed via GitHub and Streamlit Community Cloud.</li>
+            </ul>
+            <p class="result"><strong>Tools:</strong> Python, Streamlit, pandas, Plotly, python-docx, Pillow, GitHub</p>
+        </details>
+    </div>
+
+    <!-- KANTAR -->
+    <div class="exp-card">
+        <div class="exp-top">
+            <h3>Kantar</h3>
+            <div class="exp-date">May 2022 – Dec 2023</div>
+        </div>
+        <div class="exp-role">Consultant, Marketing Analytics &amp; Data Strategy</div>
+        <div class="exp-headline">Owned MMM and brand equity modeling for global FMCG brands and a leading US bank: 90%+ client CSAT, &lt;5% rework.</div>
+        <ul>
+            <li><strong>Built</strong> OLS regression and XGBoost marketing mix models with adstock carryover, benchmarking driver elasticities against Kantar norms.</li>
+            <li><strong>Produced</strong> response curves and guardrail-based budget optimization; a recommended TV-to-digital shift projected a ~1.2% value and volume uplift at the same budget.</li>
+            <li><strong>Contributed</strong> model recommendations that supported a ~10–12% improvement in business performance on a financial-services engagement.</li>
+        </ul>
+        <details>
+            <summary>See full details</summary>
+
+            <div class="sub-project">Marketing Mix Modeling · Global FMCG Brands (Southeast Asia &amp; Europe)</div>
+            <ul>
+                <li><strong>Engineered</strong> model-ready datasets from Nielsen sales and distribution, pricing, promotions, TV, digital and in-store media, and competitor data across brand, region, channel and pack levels.</li>
+                <li><strong>Decomposed</strong> year-over-year volume change into driver contributions, isolating own-price increases and distribution losses as the main causes of a double-digit decline.</li>
+                <li><strong>Quantified</strong> how distribution, TV and digital media build long-term brand power (Meaningful, Different, Salient), extending recommendations beyond short-term sales.</li>
+            </ul>
+
+            <div class="sub-project">Brand Equity Modeling · Leading US Bank</div>
+            <ul>
+                <li><strong>Ran</strong> the quarterly data pipeline behind four favorability and consideration models, combining 100+ paid-media variables with CSAT/NPS, YouGov, awareness and macroeconomic data.</li>
+                <li><strong>Transformed</strong> weekly data back to 2014 using retention-rate adstock, rolling averages and message-level groupings, reconciling each quarter against prior runs.</li>
+                <li><strong>Met</strong> a 20-business-day turnaround from data receipt to final insights every quarter.</li>
+                <li><strong>Authored</strong> a step-by-step data-processing playbook that standardized the workflow and served as a handover guide for new analysts.</li>
+            </ul>
+
+            <p class="result"><strong>How results reached clients:</strong> insight decks with driver waterfalls, response-curve tables and budget scenarios.</p>
+        </details>
+    </div>
+
+    <!-- MARS WRIGLEY -->
+    <div class="exp-card">
+        <div class="exp-top">
+            <h3>Mars Wrigley</h3>
+            <div class="exp-date">Jan 2022 – Apr 2022</div>
+        </div>
+        <div class="exp-role">Marketing Intern</div>
+        <div class="exp-headline">Retail execution and shelf tracking for a leading confectionery business.</div>
+        <ul>
+            <li><strong>Tracked</strong> shelf stock and uploaded daily shelf photos in Proanto, keeping the sales team's view of availability and shelf condition up to date.</li>
+        </ul>
+        <details>
+            <summary>See full details</summary>
+            <ul>
+                <li><strong>Executed</strong> in-store promotional and merchandising activities across retail outlets so products were displayed according to plan.</li>
+                <li><strong>Assessed</strong> product placement, visibility and shopper response to flag gaps in on-shelf execution.</li>
+                <li><strong>Applied</strong> MBA marketing concepts, including the 4Ps, shopper behavior and promotion strategy, to connect plans with what happened at the point of purchase.</li>
+            </ul>
+        </details>
+    </div>
+</section>
 
 
-    <h2 class="section-title">
-        Skills
-    </h2>
-
-
-    <p class="section-subtitle">
-        Tools and capabilities I use to solve business problems.
-    </p>
-
+<!-- ================= SKILLS ================= -->
+<section class="skills" id="skills">
+    <h2 class="section-title">Skills</h2>
+    <p class="section-subtitle">Tools and methods I use to solve business problems.</p>
 
     <div class="skills-grid">
-
-
         <div class="skill-box">
-
-            <h3>Analytics</h3>
-
-            <p>
-                Marketing Mix Modeling
-                <br>
-                Customer Analytics
-                <br>
-                ROI Analysis
-                <br>
-                Forecasting
-                <br>
-                Regression
-            </p>
-
+            <h3>Modeling &amp; Analytics</h3>
+            <ul>
+                <li>Marketing Mix Modeling</li>
+                <li>Regression &amp; Elasticity</li>
+                <li>Forecasting</li>
+                <li>Budget Optimization</li>
+                <li>Customer Analytics</li>
+            </ul>
         </div>
-
-
         <div class="skill-box">
-
-            <h3>Programming</h3>
-
-            <p>
-                Python
-                <br>
-                SQL
-                <br>
-                R
-            </p>
-
+            <h3>Programming &amp; ML</h3>
+            <ul>
+                <li>Python (pandas, scikit-learn)</li>
+                <li>SQL</li>
+                <li>R</li>
+                <li>XGBoost</li>
+                <li>Git &amp; GitHub</li>
+            </ul>
         </div>
-
-
         <div class="skill-box">
-
-            <h3>Visualization</h3>
-
-            <p>
-                Tableau
-                <br>
-                Power BI
-                <br>
-                Streamlit
-                <br>
-                Advanced Excel
-            </p>
-
+            <h3>BI &amp; Apps</h3>
+            <ul>
+                <li>Tableau</li>
+                <li>Power BI</li>
+                <li>Streamlit</li>
+                <li>Plotly</li>
+                <li>Advanced Excel</li>
+            </ul>
         </div>
-
-
         <div class="skill-box">
-
-            <h3>Business</h3>
-
-            <p>
-                Customer Insights
-                <br>
-                Requirements Analysis
-                <br>
-                Data Storytelling
-                <br>
-                Business Case Development
-            </p>
-
+            <h3>AI &amp; Business</h3>
+            <ul>
+                <li>NLP &amp; Sentiment Analysis</li>
+                <li>LLM APIs (OpenAI)</li>
+                <li>Requirements Analysis</li>
+                <li>Data Storytelling</li>
+                <li>Business Case Development</li>
+            </ul>
         </div>
-
-
     </div>
-
 </section>
 
 
-<!-- ========================================= -->
-<!-- CONTACT -->
-<!-- ========================================= -->
+<!-- ================= EDUCATION ================= -->
+<section id="education">
+    <h2 class="section-title">Education</h2>
+    <p class="section-subtitle">A business foundation, strengthened with technical analytics training.</p>
 
-<section
-    class="contact"
-    id="contact">
+    <!-- TODO: add school names and years for the MBA and BE if you want them shown -->
+    <div class="edu-grid">
+        <div class="edu-card">
+            <h3>MS, Business Analytics</h3>
+            <p>University of Cincinnati, Lindner College of Business</p>
+        </div>
+        <div class="edu-card">
+            <h3>MBA, Marketing</h3>
+            <p>Consumer behavior, brand strategy and marketing management</p>
+        </div>
+        <div class="edu-card">
+            <h3>BE, Electronics &amp; Communication</h3>
+            <p>Engineering foundation in quantitative problem-solving</p>
+        </div>
+    </div>
+</section>
 
 
-    <h2 class="section-title">
-        Let's Connect
-    </h2>
-
-
+<!-- ================= ABOUT ================= -->
+<section class="about" id="about">
+    <h2 class="section-title">About Me</h2>
     <p>
-
-        Interested in discussing marketing analytics,
-        business analytics or customer insights opportunities?
-
+        I started in marketing with an MBA, moved into analytics through Marketing Mix
+        Modeling at Kantar, and strengthened my technical toolkit with an MS in Business
+        Analytics. Today I combine marketing context, statistical modeling and AI-enabled
+        tools. I start from the business decision, find what is driving performance, and
+        turn it into clear, practical recommendations.
     </p>
-
-
-    <div
-        class="buttons"
-        style="justify-content:center;">
-
-
-        <a
-            href="https://www.linkedin.com/in/kritika-patil-a21aa3185/"
-            target="_blank"
-            class="btn primary-btn">
-
-            LinkedIn
-
-        </a>
-
-
-        <a
-            href="https://github.com/kritikanpatil68"
-            target="_blank"
-            class="btn secondary-btn">
-
-            GitHub
-
-        </a>
-
-
-    </div>
-
 </section>
 
 
-<!-- ========================================= -->
-<!-- FOOTER -->
-<!-- ========================================= -->
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact">
+    <h2 class="section-title">Let's Connect</h2>
+    <p>Open to marketing analytics, business analytics and customer insights roles.</p>
+    <a href="mailto:kritikanpatil68@gmail.com" class="contact-email">kritikanpatil68@gmail.com</a>
+    <div class="buttons">
+        <a href="mailto:kritikanpatil68@gmail.com" class="btn btn-primary">Email Me</a>
+        <a href="https://www.linkedin.com/in/kritika-patil-a21aa3185/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">LinkedIn</a>
+        <a href="https://github.com/kritikanpatil68" target="_blank" rel="noopener noreferrer" class="btn btn-outline">GitHub</a>
+        <a href="Kritika_Patil_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Resume</a>
+    </div>
+</section>
 
-<footer>
-
-    © 2026 Kritika Patil • Analytics Portfolio
-
-</footer>
-
+<footer>© 2026 Kritika Patil · Cincinnati, OH</footer>
 
 </body>
-
 </html>
